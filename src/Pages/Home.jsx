@@ -19,7 +19,7 @@ export default function Home() {
         <Sponsors />
         <PreEvents />
         <WhatHappen />
-        <BGText />
+        <BGText title={"Pricing"} head={"The conference day is completely free, but registration is required!"} button={"For a participation of 50€ for one day!"} />
         <FAQ />
     </div>
 }

@@ -1,7 +1,16 @@
-export default function BGText() {
-    return <div className="bg-text">
-        <div className="title">Pricing</div>
-        <div className="head">The conference day is completely free, but registration is required!</div>
-        <button className="btn bg-lg">For a participation of 50€ for one day!</button>
-    </div>
+export default function BGText({type, title, head, button}) {
+    if (type === 1) {
+        return <div className="bg-text">
+            {title && <div className="title">{title}</div>}
+            {head && <div className="head">{head}</div>}
+            {button && <button className="btn bg-lg">{button}</button>}
+        </div>
+    }
+    if (type === 2) {
+        return <div className="bg-text">
+            {title && <div className="head">{title}</div>}
+            {head && <div className="content">{head}</div>}
+            {button && <button className="btn bg-lg">{button}</button>}
+        </div>
+    }
 }

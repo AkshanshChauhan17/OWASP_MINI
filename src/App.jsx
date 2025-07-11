@@ -1,15 +1,57 @@
-import { useState } from 'react'
 import './App.css'
 import './main.scss'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import Donation from './Pages/Donation'
 import Home from './Pages/Home'
+import { Link, Route, Routes } from 'react-router-dom'
+import SponsorPage from './Pages/Sponsors'
+import Program from './Pages/Program'
+
+var nav_cont = [
+  {
+    title: "Home",
+    url: "/"
+  },{
+    title: "About",
+    url: "/about"
+  },{
+    title: "Program",
+    url: "/program"
+  },{
+    title: "Sponsor",
+    url: "/sponsors"
+  },{
+    title: "Donation",
+    url: "/donation"
+  },{
+    title: "Contact Us",
+    url: "/contact"
+  },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <main>
-      <Home />
-    </main>
+      <>
+        <div className="nav-bar">
+          <div className="left-icon"></div>
+          <div className="right-links">
+            {
+              nav_cont.map((e, i)=>{
+                return <Link to={e.url} className="link" key={i}>{e.title}</Link>
+              })
+            }
+          </div>
+        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/donation' element={<Donation />} />
+          <Route path='/sponsors' element={<SponsorPage />} />
+          <Route path='/program' element={<Program />} />
+        </Routes>
+      </>
   )
 }
 
