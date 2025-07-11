@@ -5,7 +5,7 @@ export default function Sponsors() {
         <div className="images">
             {
                 [...imgs].map((x, i)=>{
-                    return <div key={i} className="img" style={{backgroundImage: `url(./src/assets/sp${i+1}.png)`}}></div>
+                    return <div key={i} className="img" style={{backgroundImage: `url(./sp${i+1}.png)`}}></div>
                 })
             }
         </div>
