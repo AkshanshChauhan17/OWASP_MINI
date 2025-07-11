@@ -1,0 +1,368 @@
+.bg-lg {
+    background: radial-gradient(200px, #47725b, #93BAA5);
+}
+
+.bg-dg {
+    background-color: #3B4858;
+}
+
+.bg-wt {
+    background-color: white;
+    color: black;
+}
+
+.bg-bk {
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    background: radial-gradient(200px, #4e8d6c, #47725b);
+    transition-duration: 1s;
+    font-size: 16px;
+    padding: 16px 40px;
+    color: white;
+    border: 0px;
+    order: 0px;
+    border-radius: 2px;
+    font-family: "inter";
+    font-weight: 500;
+    width: fit-content;
+}
+
+.btn-mini {
+    font-size: 16px;
+    padding: 10px 30px;
+    color: white;
+    border: 0px;
+    order: 0px;
+    border-radius: 2px;
+    font-family: "inter";
+    font-weight: 500;
+    width: fit-content;
+}
+
+.hero {
+    background-color: #3B4858;
+    background-image: url("./assets/hero_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    .left {
+        width: fit-content;
+        padding: 60px;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        height: calc(100% - 120px);
+        .heading {
+            font-size: 100px;
+            color: white;
+            line-height: 90px;
+        }
+        .sub-heading {
+            font-size: 30px;
+            margin: 20px 0px;
+            margin-bottom: 30px;
+            color: white;
+            font-family: "inter";
+            color: rgb(222, 222, 222);
+            font-weight: 300;
+        }
+    }
+}
+
+.head-sub-button {
+    padding: 80px 60px;
+    text-align: center;
+    .head {
+        font-size: 80px;
+        color: #3B4858;
+    }
+    .sub-heading {
+        font-size: 30px;
+        color: #3B4858;
+        width: 90%;
+        font-family: "inter";
+        margin: 40px auto;
+        margin-top: 10px;
+        font-weight: 400;
+    }
+}
+
+.counter {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 60px;
+    background: linear-gradient(0deg, #3B4858, black);
+    color: white;
+    text-align: center;
+    .head {
+        font-size: 60px;
+    }
+    .sub-head {
+        font-size: 20px;
+        font-family: "inter";
+        font-weight: 200;
+    }
+}
+
+.about-owasp {
+    display: flex;
+    padding: 80px 60px;
+    gap: 60px;
+    .left {
+        display: grid;
+        gap: 20px;
+        flex: 1;
+        color: #3B4858;
+        .head {
+            font-size: 80px;
+        }
+        .sub-heading {
+            font-size: 20px;
+            font-family: "inter";
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+    }
+    .right {
+        flex: 1;
+        background-image: url("./assets/about_owasp.png");
+        background-size: cover;
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    background: linear-gradient(0deg, #3B4858, black);
+    color: white;
+    font-size: 40px;
+    padding: 20px 60px;
+    white-space: nowrap;
+    .marquee-content {
+        display: inline-block;
+        animation: scroll 120s linear infinite;
+    }
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sponsors {
+    padding: 80px 60px;
+    .head {
+        color: #3B4858;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .images {
+        display: flex;
+        gap: 60px;
+        padding: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .img {
+            min-width: 200px;
+            max-width: 300px;
+            height: 100px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.pre-events {
+    padding: 60px;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    .head {
+        color: #3B4858;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .events {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: #3B4858;
+        .event {
+            overflow: hidden;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            outline: 1px solid #dedede;
+            .image {
+                height: 150px;
+                background-image: url("./assets/demo_th_event.jpg");
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+            .year {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            .text {
+                font-size: 16px;
+                font-family: "inter";
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+            button {
+                width: 100%;
+                cursor: pointer;
+            }
+            button:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+}
+
+.btn {
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.btn:hover {
+    background: radial-gradient(500px, #4e8d6c, #47725b);
+}
+
+li {
+    list-style-type: disc;
+    font-size: 18px;
+    font-family: "inter";
+    font-weight: 500;
+    color: black;
+}
+
+.bg-text {
+    margin: 0px 60px;
+    background-image: url("./assets/bg.jpg");
+    background-color: rgb(67, 65, 65);
+    background-blend-mode: darken;
+    background-size: cover;
+    padding: 60px;
+    border-radius: 20px;
+    color: white;
+    display: grid;
+    .title {
+        font-family: "inter";
+        font-weight: 300;
+        text-align: center;
+        font-size: 20px;
+    }
+    .head {
+        font-size: 40px;
+        width: 700px;
+        text-align: center;
+        margin: 30px auto;
+        line-height: 38px;
+    }
+    button {
+        margin: auto;
+    }
+}
+
+.faq {
+    padding: 60px;
+    .head {
+        font-size: 80px;
+        width: 700px;
+        text-align: center;
+        margin: 40px auto;
+        line-height: 38px;
+    }
+    .section {
+        display: flex;
+        gap: 40px;
+        margin-top: 100px;
+        .left {
+            flex: 1;
+            display: grid;
+            flex-direction: column;
+            gap: 20px;
+            .faq-single {
+                display: flex;
+                font-size: 20px;
+                font-family: "inter";
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                padding: 10px 20px;
+                box-shadow: 0px 10px 10px rgb(204, 204, 204);
+                .r-icon {
+                    padding: 10px;
+                    border-radius: 30px;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #93BAA5;
+                    color: white;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: "inter";
+                    cursor: pointer;
+                }
+                .r-icon:hover {
+                    filter: brightness(0.9);
+                }
+                .l-icon {
+                    font-family: "inter";
+                    font-size: 30px;
+                    color: #93BAA5;
+                }
+            }
+        }
+        .right {
+            flex: 1;
+            .icon {
+                background-image: url("./assets/faq.svg");
+                height: 300px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 200px;
+                color: white;
+                margin-bottom: 60px;
+            }
+            .r-head {
+                font-size: 40px;
+            }
+            .r-sub {
+                font-size: 20px;
+                font-family: "inter";
+            }
+            .input-ar {
+                padding: 20px 0px;
+                input {
+                    width: 100%;
+                    font-size: 20px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
