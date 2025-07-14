@@ -7,6 +7,9 @@ import Home from './Pages/Home'
 import { Link, Route, Routes } from 'react-router-dom'
 import SponsorPage from './Pages/Sponsors'
 import Program from './Pages/Program'
+import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
+import { useState } from 'react'
+import Footer from './Components/Footer'
 
 var nav_cont = [
   {
@@ -31,15 +34,21 @@ var nav_cont = [
 ]
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
   return (
       <>
-        <div className="nav-bar">
+        <div className={navOpen ? "nav-bar nav-bar-open" : "nav-bar"}>
           <div className="left-icon"></div>
           <div className="right-links">
             {
               nav_cont.map((e, i)=>{
                 return <Link to={e.url} className="link" key={i}>{e.title}</Link>
               })
+            }
+          </div>
+          <div className='navigation-opener'>
+            {
+              navOpen ? <AiOutlineMenuUnfold className='nav-opiner' onClick={()=>setNavOpen(false)} /> : <AiOutlineMenuFold className='nav-opiner' onClick={()=>setNavOpen(true)}/>
             }
           </div>
         </div>
@@ -51,6 +60,7 @@ function App() {
           <Route path='/sponsors' element={<SponsorPage />} />
           <Route path='/program' element={<Program />} />
         </Routes>
+        <Footer />
       </>
   )
 }

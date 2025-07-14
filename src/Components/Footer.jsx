@@ -1,0 +1,92 @@
+import { AiFillLinkedin, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai"
+import { Link } from "react-router-dom"
+
+var footerLinks = [
+    {
+        title: "OWASP BENELUX",
+        links: [
+            {
+                name: "Home",
+                link: "/"
+            },{
+                name: "About",
+                link: "/about"
+            }
+        ]
+    },{
+        title: "SPONSORS",
+        links: [
+            {
+                name: "Our Sponsor",
+                link: "/sponsors"
+            },{
+                name: "Our Programs",
+                link: "/program"
+            }
+        ]
+    },{
+        title: "CONNECT",
+        links: [
+            {
+                name: "Contact Us",
+                link: "/contact"
+            },{
+                name: "Blogs/News",
+                link: "/blog"
+            }
+        ]
+    }
+]
+
+var iconLink = {
+        title: "FOLLOW US",
+        links: [
+            {
+                name: <AiOutlineLinkedin />,
+                link: "/"
+            },{
+                name: <AiOutlineTwitter />,
+                link: "/"
+            },{
+                name: <AiOutlineInstagram />,
+                link: "/"
+            },{
+                name: <AiOutlineFacebook />,
+                link: "/"
+            }
+        ]
+    }
+
+export default function Footer() {
+    return <div className="footer">
+        <div className="top-links">
+            <div className="left-links">
+                {
+                    footerLinks.map((e, i)=>{
+                        return <div className="links-ar" key={i}>
+                            <div className="title">{e.title}</div>
+                            <div className="links">
+                                {
+                                    e.links.map((j, ii)=>{
+                                        return <Link key={ii} to={j.link}>{j.name}</Link>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    })
+                }
+                <div className="links-ar">
+                <div className="title">{iconLink.title}</div>
+                <div className="links-icon">
+                    {
+                        iconLink.links.map((e, i)=>{
+                            return <div key={i} className="icon-link">{e.name}</div>
+                        })
+                    }
+                </div>
+            </div>
+            </div>
+        </div>
+        <div className="bottom-text">© OWASP Foundation 2025</div>
+    </div>
+}
