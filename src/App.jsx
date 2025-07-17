@@ -34,7 +34,7 @@ var nav_cont = [
 ]
 
 function App() {
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(true);
   return (
       <>
         <div className={navOpen ? "nav-bar nav-bar-open" : "nav-bar"}>
@@ -42,7 +42,7 @@ function App() {
           <div className="right-links">
             {
               nav_cont.map((e, i)=>{
-                return <Link to={e.url} className="link" key={i}>{e.title}</Link>
+                return <Link to={e.url} onClick={()=>setNavOpen(true)} className="link" key={i}>{e.title}</Link>
               })
             }
           </div>

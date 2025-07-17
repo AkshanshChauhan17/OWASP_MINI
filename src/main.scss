@@ -174,9 +174,10 @@
     font-size: 40px;
     padding: 20px 60px;
     white-space: nowrap;
+    zoom: 0.6;
     .marquee-content {
         display: inline-block;
-        animation: scroll 120s linear infinite;
+        animation: scroll 360s linear infinite;
     }
     .marquee-content:hover {
         animation-play-state: paused;
@@ -322,6 +323,23 @@ li {
     }
 }
 
+.faq-section {
+    display: grid;
+    gap: 20px;
+    .faq-ans {
+        font-family: "inter";
+        font-size: 16px;
+    }
+    .r-icon {
+        transition-duration: 0.3s;
+    }
+    .open {
+        background-color: #8d4e4e !important;
+        rotate: 45deg;
+        transition-duration: 0.3s;
+    }
+}
+
 .faq {
     padding: 60px;
     .head {
@@ -329,7 +347,7 @@ li {
         width: 700px;
         text-align: center;
         margin: 40px auto;
-        line-height: 38px;
+        line-height: 80px;
     }
     .section {
         display: flex;
@@ -351,9 +369,11 @@ li {
                 box-shadow: 0px 10px 10px rgb(204, 204, 204);
                 .r-icon {
                     padding: 10px;
-                    border-radius: 30px;
+                    border-radius: 50%;
                     height: 20px;
                     width: 20px;
+                    max-width: 20px;
+                    height: 20px;
                     background-color: #93BAA5;
                     color: white;
                     font-size: 20px;
@@ -367,6 +387,7 @@ li {
                     filter: brightness(0.9);
                 }
                 .l-icon {
+                    display: none;
                     font-family: "inter";
                     font-size: 30px;
                     color: #93BAA5;
@@ -585,11 +606,11 @@ li {
 }
 
 .footer {
-    padding: 60px;
+    padding: 80px 60px;
     background-color: #3B4858;
     color: white;
     display: grid;
-    gap: 40px;
+    gap: 80px;
     .top-links {
         display: flex;
         gap: 10px;
@@ -601,7 +622,7 @@ li {
             width: 100%;
             .links-ar {
                 .title {
-                    font-size: 60px;
+                    font-size: 40px;
                 }
                 .links {
                     display: flex;
@@ -611,7 +632,7 @@ li {
                         color: white;
                         font-weight: 300;
                         text-decoration: none;
-                        font-size: 30px;
+                        font-size: 20px;
                         font-family: "inter";
                     }
                 }
@@ -624,6 +645,8 @@ li {
         }
     }
     .bottom-text {
+        border-top: 1px solid rgba(255, 255, 255, 0.489);
+        padding-top: 60px;
         color: white;
         font-size: 20px;
         font-family: "inter";
@@ -682,10 +705,12 @@ li {
     }
     .hero {
         display: flex;
+        height: 80vh;
     }
     .hero .left {
         margin: auto;
         padding: 20px;
+        text-align: center;
     }
     .hero .left .heading,
     .hero-mini .heading,
@@ -716,16 +741,30 @@ li {
     .about-owasp {
         flex-direction: column;
         padding: 40px 20px;
+        text-align: center;
+        .right {
+            display: none;
+        }
+        .left {
+            .sub-heading {
+                font-size: 16px;
+            }
+            li {
+                font-size: 16px;
+                margin-top: 20px;
+                list-style-type: none;
+            }
+        }
     }
     .head-sub-button {
         padding: 40px 20px;
     }
     .counter {
-        flex-direction: column;
+        flex-direction: row;
         padding: 40px 20px;
     }
     .marquee-container {
-        font-size: 24px;
+        font-size: 20px;
         padding: 20px;
     }
     .sponsors {
@@ -733,14 +772,26 @@ li {
     }
     .sponsors .images {
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 10px;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+        gap: 40px;
         padding: 0px;
+        margin-bottom: 20px;
+        overflow-x: visible;
+        padding: 20px;
+        scroll-snap-type: x mandatory;
+        justify-content: start;
+        overflow-x: scroll;
+    }
+    .sponsors .images::-webkit-scrollbar {
+        display: none;
     }
     .sponsors .images .img {
-        min-width: 42vw;
+        min-width: 50vw;
         max-width: auto;
-        height: 50px;
+        height: 100px;
+        outline: 1px solid rgb(172, 172, 172);
+        outline-offset: 10px;
+        scroll-snap-align: center;
     }
     .pre-events {
         padding: 40px 0px;
@@ -781,11 +832,16 @@ li {
         font-size: 24px;
     }
     .icon-title-content {
-        padding: 40px 20px;
+        padding: 60px 20px;
     }
     .faq {
+        padding: 40px 20px;
+        .head {
+            font-size: 40px;
+        }
         .section {
             .right {
+                margin-top: 40px;
                 .input-ar {
                     input {
                         width: calc(100% - 24px);
@@ -795,7 +851,22 @@ li {
         }
     }
     .vision {
-        padding: 40px 20px;
+        padding: 60px 20px;
+        .title-icon {
+            .title {
+                font-size: 40px;
+                font-weight: 100;
+            }
+            .icon {
+                width: 100px;
+                height: 100px;
+                display: none;
+            }
+        }
+        .content {
+            display: grid;
+            gap: 20px;
+        }
     }
     .vision .title-icon {
         flex-direction: column;
@@ -815,25 +886,40 @@ li {
         color: white;
         font-size: 30px;
         position: fixed;
-        background-color: #007BFF;
+        background-color: #fcfcfc;
         padding: 10px;
         display: flex;
         top: 20px;
         right: 20px;
+        color: black;
+        justify-content: right;
     }
     .nav-bar {
         padding: 20px;
+        height: 100vh;
         flex-direction: column;
         align-items: left;
         width: calc(100% - 40px);
+        justify-content: start;
         gap: 10px;
         position: fixed;
-        background-color: #007BFF;
+        background-color: white;
+        transition-duration: 0.5s;
+        .left-icon {
+            margin: 5px 0px;
+            position: fixed;
+            top: 20px;
+            background-size: contain;
+            mix-blend-mode: difference !important;
+        }
         .right-links {
+            margin-top: 60px;
             padding: 20px 0px;
             a {
-                box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+                box-shadow: inset 0px -5px 10px rgba(160, 160, 160, 0.3);
                 padding: 10px;
+                color: black;
+                font-weight: 500;
             }
             a:hover {
                 box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
@@ -847,8 +933,9 @@ li {
         width: calc(100% - 40px);
         gap: 10px;
         position: fixed;
-        background-color: #007BFF;
-        top: -100%;
+        background-color: #ffffff;
+        top: calc(-100vh - 40px);
+        transition-duration: 0.5s;
     }
     .nav-bar .right-links {
         flex-direction: column;
@@ -944,7 +1031,7 @@ li {
         display: inline;
     }
     .footer {
-        padding: 20px;
+        padding: 60px 20px;
         background-color: #3B4858;
         color: white;
         display: grid;
@@ -955,36 +1042,42 @@ li {
             justify-content: space-between;
             .left-links {
                 display: grid;
+                grid-template-columns: auto auto;
                 gap: 30px;
                 justify-content: space-evenly;
                 width: 100%;
                 .links-ar {
                     .title {
-                        font-size: 40px;
+                        font-size: 22px;
+                        font-weight: 100;
                     }
                     .links {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
+                        margin-top: 20px;
                         a {
                             color: white;
                             font-weight: 300;
                             text-decoration: none;
-                            font-size: 30px;
+                            font-size: 16px;
                             font-family: "inter";
                         }
                     }
                     .links-icon {
-                        display: flex;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        flex-direction: column;
                         font-size: 40px;
-                        gap: 10px;
+                        gap: 0px;
+                        margin-top: 20px;
                     }
                 }
             }
         }
         .bottom-text {
             color: white;
-            font-size: 20px;
+            font-size: 12px;
             font-family: "inter";
             text-align: center;
             font-weight: 200;

@@ -1,38 +1,38 @@
 var speakers = [
     {
-        icon: "/src/assets/spk1.jpg",
+        icon: "/public/spk1.jpg",
         name: "Sebastien Deleersnyder",
         content: `Introduction and OWASP update`,
     },{
-        icon: "/src/assets/spk2.jpg",
+        icon: "/public/spk2.jpg",
         name: "Pieter De Cremer",
         content: `Pieter De Cremer, a long-time security enthusiast, joined Secure Code Warrior as part of an internship in 2015. Over the next two years, he wrote more than 100 rules for Sensei, their flagship IDE security plugin.`
     },{
-        icon: "/src/assets/spk3.jpg",
+        icon: "/public/spk3.jpg",
         name: "Edzo Botjes",
         content: `Edzo Botjes is Antifragility Architect at Xebia and in IT since 1991. He published his Master Thesis titled "Defining Antifragility and the Application on Organisation Design" in 2020 as open access under CC BY-SA 4.0.`
     },{
-        icon: "/src/assets/spk4.jpg",
+        icon: "/public/spk4.jpg",
         name: "Giuseppe Trovato",
         content: `Giuseppe has always been fascinated by many aspects of Information Security and chose to focus on software security when he joined Veracode in 2014. He has spent his time building stuff, helping developers with the identification.`
     },{
-        icon: "/src/assets/spk5.jpg",
+        icon: "/public/spk5.jpg",
         name: "Glenn ten Cate",
         content: `As a coder, hacker, speaker, trainer and security chapter leader employed at ING Belgium Glenn has over 15 years experience in the field of security. One of the founders of defensive development security trainings`
     },{
-        icon: "/src/assets/spk6.jpg",
+        icon: "/public/spk6.jpg",
         name: "Christian Folini",
         content: `Dr. Christian Folini is a Swiss security engineer and open source enthusiast. He brings 15 years of experience with ModSecurity configuration in high security environments, DDoS defense and threat modeling.`
     },{
-        icon: "/src/assets/spk7.png",
+        icon: "/public/spk7.png",
         name: "Rob van der Veer",
         content: `Rob van der Veer has a 30 year background in building secure software and running software businesses. Cyber security and privacy have been constant themes in his career, from hacking into the British RAF in 1986`
     },{
-        icon: "/src/assets/spk8.png",
+        icon: "/public/spk8.png",
         name: "Theo Rigas",
         content: `Théo Rigas is a cyber security expert at NVISO, where he helps customers secure their products’ ecosystems on a daily basis. He has performed numerous IoT and embedded security assessments in many sectors, on devices including industrial routers`
     },{
-        icon: "/src/assets/spk9.png",
+        icon: "/public/spk9.png",
         name: "Philippe De Ryck",
         content: `Philippe De Ryck helps developers protect companies through better web security. His Ph.D. in web security from KU Leuven lies at the basis of his exceptional knowledge of the security landscape. As the founder of Pragmatic Web Security, Philippe`
     }
