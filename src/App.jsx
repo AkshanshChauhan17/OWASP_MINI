@@ -38,7 +38,7 @@ function App() {
   return (
       <>
         <div className={navOpen ? "nav-bar nav-bar-open" : "nav-bar"}>
-          <div className="left-icon"></div>
+          <Link to={"/"} onClick={()=>setNavOpen(false)}><div className="left-icon"></div></Link>
           <div className="right-links">
             {
               nav_cont.map((e, i)=>{
