@@ -8,6 +8,6 @@ export default function OBDC({title, subtitle, button}) {
             </div>
             <button className="btn bg-lg">{button}</button>
         </div>
-        <div className="right"></div>
+        <div className="right" style={{backgroundImage: "url(/img4.jpg)"}}></div>
     </div>
 }

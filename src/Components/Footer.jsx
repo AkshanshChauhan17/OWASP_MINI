@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai"
+import { AiFillLinkedin, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineSlack, AiOutlineTwitter } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
 var footerLinks = [
@@ -31,8 +31,8 @@ var footerLinks = [
                 name: "Contact Us",
                 link: "/contact"
             },{
-                name: "Blogs/News",
-                link: "/blog"
+                name: "Donation",
+                link: "/donation"
             }
         ]
     }
@@ -43,16 +43,10 @@ var iconLink = {
         links: [
             {
                 name: <AiOutlineLinkedin />,
-                link: "/"
+                link: "https://www.linkedin.com/company/owasp-benelux-days/"
             },{
-                name: <AiOutlineTwitter />,
-                link: "/"
-            },{
-                name: <AiOutlineInstagram />,
-                link: "/"
-            },{
-                name: <AiOutlineFacebook />,
-                link: "/"
+                name: <AiOutlineSlack />,
+                link: "https://owasp.slack.com/"
             }
         ]
     }
@@ -80,7 +74,7 @@ export default function Footer() {
                 <div className="links-icon">
                     {
                         iconLink.links.map((e, i)=>{
-                            return <div key={i} className="icon-link">{e.name}</div>
+                            return <div key={i} className="icon-link" onClick={()=>window.open(e.link)}>{e.name}</div>
                         })
                     }
                 </div>

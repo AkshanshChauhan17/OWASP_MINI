@@ -6,7 +6,7 @@ export default function Hero() {
         <div className="left">
             <div className="heading">OWASP BENELUX DAYS <br/>CONFERENCE 2025</div>
             <div className="sub-heading">by OWASP Foundation</div>
-            <Link to={"/donation"}><button className="btn bg-lg">Donate to OWASP</button></Link>
+            <Link to={"/donation"}><button className="btn bg-lg">REGISTER</button></Link>
         </div>
     </div>
 }

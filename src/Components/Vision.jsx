@@ -1,3 +1,5 @@
+import {AiOutlineArrowRight} from "react-icons/ai";
+
 var bullets = [
     "Harassment includes, but is not limited to, offensive verbal comments related to gender, race, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.",
     "Participants asked to stop any harassing behavior are expected to comply immediately.",
@@ -12,10 +14,22 @@ var bullets = [
     "We expect participants to follow these rules at conference and workshop venues and conference-related social events."
 ]
 
+var links = [
+    {
+        name: "Conferences Events",
+        link: "https://owasp.org/www-policy/operational/conferences-events"
+    }, {
+        name: "Code Of Conduct",
+        link: "https://owasp.org/www-policy/operational/code-of-conduct"
+    }, {
+        name: "Diversity statement",
+        link: "https://2025.owaspbenelux.eu/about/diversity-statement"
+    }];
+
 export default function Vision() {
     return <div className="vision">
         <div className="title-icon">
-            <div className="title">THE LESS QUICK VERSION</div>
+            <div className="title">Change it to Policy & Guidelines</div>
             <div className="icon"></div>
         </div>
         <div className="content">
@@ -25,5 +39,14 @@ export default function Vision() {
                 })
             }
         </div>
+        <div className="links">
+            {
+                links.map((link, i)=>{
+                    return <a className="link-btn" href={link.link} key={i}>{link.name} <AiOutlineArrowRight /></a>
+                })
+            }
+        </div>
+        <br />
+        <a className="read-more" href="https://owasp.org/www-policy/">https://owasp.org/www-policy/</a>
     </div>
 }

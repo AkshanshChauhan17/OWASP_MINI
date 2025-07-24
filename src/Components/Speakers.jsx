@@ -1,12 +1,12 @@
 var speakers = [
     {
         icon: "/spk1.jpg",
-        name: "Sebastien Deleersnyder",
+        name: "Irfan Santoe",
         content: `Introduction and OWASP update`,
     },{
         icon: "/spk2.jpg",
-        name: "Pieter De Cremer",
-        content: `Pieter De Cremer, a long-time security enthusiast, joined Secure Code Warrior as part of an internship in 2015. Over the next two years, he wrote more than 100 rules for Sensei, their flagship IDE security plugin.`
+        name: "Jim Manico",
+        content: `Jim Manico, a long-time security enthusiast, joined Secure Code Warrior as part of an internship in 2015. Over the next two years, he wrote more than 100 rules for Sensei, their flagship IDE security plugin.`
     },{
         icon: "/spk3.jpg",
         name: "Edzo Botjes",
@@ -40,7 +40,7 @@ var speakers = [
 
 export default function Speakers() {
     return <div className="speakers">
-        <div className="title">KEY SPEAKERS</div>
+        <div className="title">PREVIOUS YEAR SPEAKERS</div>
         <div className="speaker-ar">
             {
                 speakers.map((e, i)=>{

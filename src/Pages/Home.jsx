@@ -12,7 +12,7 @@ import WhatHappen from "../Components/WhatHappen";
 export default function Home() {
     return <div className="home">
         <Hero />
-        <HeadSubButton head={"SAVE THE DATE"} sub_head={"This year, the OWASP BeNeLux days will take place on Tuesday the 2nd and Wednesday the 3rd of December 2025 in Belgium."} button={"More information will follow"} />
+        <HeadSubButton h_url={"/program"} head={"SAVE THE DATE"} sub_head={"This year, the OWASP BeNeLux days will take place on Tuesday the 2nd and Wednesday the 3rd of December 2025 in Belgium."} button={"More information will follow"} />
         <Counter />
         <AboutOwasp />
         <TextScroller />
@@ -20,6 +20,6 @@ export default function Home() {
         <PreEvents />
         <WhatHappen />
         <BGText title={"Pricing"} head={"The conference day is completely free, but registration is required!"} button={"For a participation of 50€ for one day!"} />
-        <FAQ />
+        <FAQ ao={true} />
     </div>
 }

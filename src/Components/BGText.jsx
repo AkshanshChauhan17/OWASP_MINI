@@ -1,4 +1,4 @@
-export default function BGText({type, title, head, button}) {
+export default function BGText({type, title, head, button, button_t}) {
     if (type === 1) {
         return <div className="bg-text">
             {title && <div className="title">{title}</div>}
@@ -10,7 +10,8 @@ export default function BGText({type, title, head, button}) {
         return <div className="bg-text">
             {title && <div className="head">{title}</div>}
             {head && <div className="content">{head}</div>}
-            {button && <button className="btn bg-lg">{button}</button>}
+            {button && <button className="btn bg-lg" onClick={()=>window.open("mailto: <>")}>{button}</button>}
+            {button_t}
         </div>
     }
 }
