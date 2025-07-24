@@ -10,6 +10,7 @@ import Program from './Pages/Program'
 import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
 import { useState } from 'react'
 import Footer from './Components/Footer'
+import Conference from './Pages/Conference'
 
 var nav_cont = [
   {
@@ -59,6 +60,7 @@ function App() {
           <Route path='/donation' element={<Donation />} />
           <Route path='/sponsors' element={<SponsorPage />} />
           <Route path='/program' element={<Program />} />
+          <Route path='/conference' element={<Conference />} />
         </Routes>
         <Footer />
       </>

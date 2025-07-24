@@ -229,7 +229,7 @@
 }
 
 .pre-events {
-    padding: 60px;
+    padding: 60px 80px;
     border-top: 1px solid #d2d2d2;
     border-bottom: 1px solid #d2d2d2;
     .head {
@@ -904,7 +904,190 @@ li {
     }
 }
 
+.conference-schedule {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 2rem;
+        font-size: 60px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        th,
+        td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            cursor: pointer;
+            font-family: "inter";
+        }
+        th {
+            background-color: #222;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+        tr:hover {
+            background-color: #f9eaea;
+        }
+    }
+}
+
+.conference-info {
+    font-size: 40px;
+    padding: 60px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    background-color: #2a2a2a;
+    p {
+        margin: 20px 0px;
+    }
+    strong {
+        color: #d9534f;
+    }
+    .membership-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: #0077b5;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.confirmed-speakers {
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    max-width: 98vw;
+    margin: 0 auto;
+    h2 {
+        font-size: 2rem;
+        color: #222;
+        text-align: left;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+    .speaker {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        h3 {
+            font-size: 1.4rem;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+            strong {
+                font-weight: 600;
+            }
+        }
+        p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1rem;
+            font-family: "inter";
+            em {
+                color: #007acc;
+                font-style: italic;
+            }
+        }
+        .abstract,
+        .bio {
+            margin-top: 1rem;
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 0.4rem;
+                color: #555;
+            }
+            p {
+                margin-bottom: 0.5rem;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+        footer {
+            margin-top: 1rem;
+            a {
+                display: inline-block;
+                text-decoration: none;
+                background-color: #007acc;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                transition: background-color 0.3s ease;
+                &:hover {
+                    background-color: #005c99;
+                }
+            }
+        }
+    }
+    // Responsive tweaks
+    @media (max-width: 600px) {
+        padding: 1rem;
+        .speaker {
+            padding: 1rem;
+            h3 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
+    .conference-schedule {
+        padding: 0rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 0rem;
+            font-size: 28px;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            th,
+            td {
+                padding: 1rem;
+                border: 1px solid #ddd;
+                text-align: left;
+                cursor: pointer;
+            }
+            th {
+                background-color: #222;
+                color: #fff;
+            }
+            tr:nth-child(even) {
+                background-color: #f3f3f3;
+            }
+            tr:hover {
+                background-color: #f9eaea;
+            }
+        }
+    }
     .faq {
         padding: 60px;
         .head {

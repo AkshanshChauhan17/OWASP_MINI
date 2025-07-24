@@ -1,5 +1,6 @@
 import AboutOwasp from "../Components/AboutOwasp";
 import BGText from "../Components/BGText";
+import ConferenceInfo from "../Components/ConferenceInfo";
 import Counter from "../Components/Counter";
 import FAQ from "../Components/FAQ";
 import HeadSubButton from "../Components/HeadSubButton";
@@ -19,6 +20,7 @@ export default function Home() {
         <Sponsors />
         <PreEvents />
         <WhatHappen />
+        <ConferenceInfo />
         <BGText title={"Pricing"} head={"The conference day is completely free, but registration is required!"} button={"For a participation of 50€ for one day!"} />
         <FAQ ao={true} />
     </div>
