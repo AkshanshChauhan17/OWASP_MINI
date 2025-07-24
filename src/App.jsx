@@ -31,7 +31,10 @@ var nav_cont = [
   },{
     title: "Contact Us",
     url: "/contact"
-  },
+  }, {
+    title: "Conference",
+    url: "/conference"
+  }
 ]
 
 function App() {
