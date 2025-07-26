@@ -17,9 +17,9 @@ var events = [
     }
 ];
 
-export default function PreEvents() {
+export default function PreEvents({title_show}) {
     return <div className="pre-events">
-        <div className="head">PREVIOUS BENELUX DAYS</div>
+        {title_show && <div className="head">PREVIOUS BENELUX DAYS</div>}
         <div className="events">
             {
                 [...events].map((e, i)=>{

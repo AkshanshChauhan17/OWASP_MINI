@@ -163,15 +163,22 @@
             font-size: 80px;
         }
         .sub-heading {
-            font-size: 20px;
+            font-size: 26px;
             font-family: "inter";
             line-height: 40px;
             margin-bottom: 30px;
+            font-weight: 400;
+            li {
+                line-height: 26px;
+                font-size: 20px;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
         }
     }
     .right {
         flex: 1;
-        background-image: url("./assets/about_owasp.png");
+        background-image: url("./assets/img4.jpg");
         background-size: cover;
     }
 }
@@ -366,7 +373,7 @@ li {
         .left {
             flex: 1;
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 50% 50%;
             flex-direction: column;
             gap: 20px;
             .faq-single {
@@ -553,7 +560,7 @@ li {
         color: #222;
     }
     .contact-subtitle {
-        font-size: 20px;
+        font-size: 24px;
         color: #555;
         margin-bottom: 2rem;
         font-family: "inter";
@@ -568,6 +575,10 @@ li {
             color: #444;
             font-family: "inter";
             list-style-type: none;
+            font-size: 20px;
+            b {
+                font-size: 20px;
+            }
             a {
                 color: #007BFF;
                 text-decoration: underline;
@@ -619,9 +630,25 @@ li {
     }
 }
 
+.head-sub-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .bam {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: #47725b;
+        outline: 1px solid #47725b;
+    }
+}
+
 .nav-bar {
-    padding: 40px 60px;
-    position: absolute;
+    padding: 20px 60px;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     width: calc(100vw - 135px);
@@ -827,30 +854,58 @@ li {
     }
 }
 
+.yt-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .price-table-container {
     max-width: 92vw;
     margin: 2rem auto;
+    margin-top: 0px;
     padding: 1rem;
     font-family: 'Segoe UI', sans-serif;
     color: #333;
     .price-table {
+        * {
+            font-family: "inter";
+        }
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 2rem;
         th {
-            background-color: #0077b5;
+            background-color: #222;
             color: white;
             text-align: left;
             padding: 12px;
+            font-family: "Bebas Neue";
+            font-size: 20px;
+            font-weight: 100;
+            &:nth-child(odd) {
+                background-color: #323232;
+            }
         }
         td {
             border: 1px solid #ccc;
             padding: 12px;
             vertical-align: top;
+            width: 26.6666%;
+            font-weight: 800;
             &:first-child {
                 font-weight: 600;
                 background-color: #f9f9f9;
-                width: 35%;
+                width: 20%;
+                font-weight: 400;
+            }
+            &:nth-child(2) {
+                background: linear-gradient(90deg, #ffffff, #e7fff7, #d8fff3, #ffffff);
+            }
+            &:nth-child(3) {
+                background: linear-gradient(90deg, #ffffff, #ffe9bc, #ffedc9, #ffffff);
+            }
+            &:nth-child(4) {
+                background: linear-gradient(90deg, #fafafa, #e6ebff, #ffe4e4, #ffffff);
             }
         }
         tr:nth-child(even) {
@@ -859,40 +914,6 @@ li {
         tr:hover {
             background-color: #eef5fb;
         }
-        @media screen and (max-width: 768px) {
-            thead {
-                display: none;
-            }
-            tbody {
-                display: block;
-            }
-            tr {
-                display: block;
-                margin-bottom: 1.5rem;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                overflow: hidden;
-            }
-            td {
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 12px;
-                position: relative;
-                text-align: right;
-                &:before {
-                    content: attr(data-label);
-                    font-weight: bold;
-                    text-align: left;
-                    width: 0%;
-                    color: #444;
-                }
-                &:first-child {
-                    background-color: #f1f1f1;
-                    font-weight: bold;
-                    font-size: 1rem;
-                }
-            }
-        }
     }
     .notes {
         font-size: 0.9rem;
@@ -900,6 +921,104 @@ li {
         color: #555;
         p {
             margin-bottom: 0.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .price-table-container {
+        max-width: calc(100vw - 20px);
+        margin: 2rem auto 0;
+        padding: 1rem;
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+    }
+    .price-table-container .price-table {
+        width: calc(100vw - 40px);
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+    }
+    .price-table-container .price-table * {
+        font-family: "Inter", sans-serif;
+    }
+    .price-table-container .price-table th {
+        background-color: #222;
+        color: white;
+        text-align: left;
+        padding: 12px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .price-table-container .price-table th:nth-child(odd) {
+        background-color: #323232;
+    }
+    .price-table-container .price-table td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        vertical-align: top;
+        width: 26.6666%;
+        font-weight: 800;
+    }
+    .price-table-container .price-table td:first-child {
+        font-weight: 400;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+    .price-table-container .price-table td:nth-child(2) {
+        background: linear-gradient(90deg, #ffffff, #e7fff7, #d8fff3, #ffffff);
+    }
+    .price-table-container .price-table td:nth-child(3) {
+        background: linear-gradient(90deg, #ffffff, #ffe9bc, #ffedc9, #ffffff);
+    }
+    .price-table-container .price-table td:nth-child(4) {
+        background: linear-gradient(90deg, #fafafa, #e6ebff, #ffe4e4, #ffffff);
+    }
+    .price-table-container .price-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .price-table-container .price-table tr:hover {
+        background-color: #eef5fb;
+    }
+    .price-table-container .notes {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    .price-table-container .notes p {
+        margin-bottom: 0.6rem;
+    }
+    /* MEDIA QUERIES */
+    @media screen and (max-width: 768px) {
+        .price-table-container {
+            padding: 0.5rem;
+        }
+        .price-table-container .price-table th,
+        .price-table-container .price-table td {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        .price-table-container .price-table td {
+            width: auto;
+            display: block;
+            width: 100%;
+        }
+        .price-table-container .price-table tr {
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+        }
+        .price-table-container .price-table thead {
+            display: none;
+        }
+        .price-table-container .price-table td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .price-table-container .notes {
+            font-size: 0.85rem;
         }
     }
 }
@@ -925,7 +1044,6 @@ li {
             padding: 1rem;
             border: 1px solid #ddd;
             text-align: left;
-            cursor: pointer;
             font-family: "inter";
         }
         th {
@@ -972,6 +1090,9 @@ li {
     border-radius: 1rem;
     max-width: 98vw;
     margin: 0 auto;
+    * {
+        font-family: "inter" !important;
+    }
     h2 {
         font-size: 2rem;
         color: #222;
@@ -986,8 +1107,20 @@ li {
         padding: 1.5rem;
         margin-bottom: 2rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        .left {
+            padding-right: 20px;
+            padding-top: 30px;
+            .image-spk {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+        }
         h3 {
-            font-size: 1.4rem;
+            font-size: 30px;
             color: #2a2a2a;
             margin-bottom: 0.5rem;
             strong {
@@ -995,7 +1128,7 @@ li {
             }
         }
         p {
-            font-size: 1rem;
+            font-size: 20px;
             color: #444;
             margin-bottom: 1rem;
             font-family: "inter";
@@ -1008,10 +1141,10 @@ li {
         .bio {
             margin-top: 1rem;
             h4 {
-                font-size: 1.1rem;
+                font-size: 20px;
                 font-weight: 600;
                 margin-bottom: 0.4rem;
-                color: #555;
+                color: #000000;
             }
             p {
                 margin-bottom: 0.5rem;
@@ -1033,6 +1166,22 @@ li {
                 &:hover {
                     background-color: #005c99;
                 }
+            }
+        }
+    }
+    .follow-link {
+        display: flex;
+        gap: 10px;
+        align-items: end;
+        font-size: 20px;
+        font-weight: 300;
+        span {
+            display: flex;
+            font-size: 40px;
+            cursor: pointer;
+            color: #0077b5;
+            img {
+                height: 38px;
             }
         }
     }
@@ -1443,12 +1592,12 @@ li {
     }
     .nav-opiner {
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         position: fixed;
         background-color: #fcfcfc;
-        padding: 10px;
+        padding: 5px;
         display: flex;
-        top: 20px;
+        top: 25px;
         right: 20px;
         color: black;
         justify-content: right;
@@ -1466,7 +1615,7 @@ li {
         transition-duration: 0.5s;
         .left-icon {
             margin: 5px 0px;
-            position: fixed;
+            position: absolute;
             top: 20px;
             background-size: contain;
             mix-blend-mode: difference !important;

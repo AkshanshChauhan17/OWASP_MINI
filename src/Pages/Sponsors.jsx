@@ -71,12 +71,13 @@ var faqList = [
 
 export default function SponsorPage() {
     return <div className="sponsors-page">
-        <HeroMini title={"SPONSORS"} />
-        <IconTitleContent icon={false} title={"Sponsorship packages"} content={"There are 3 combined sponsorship packages (Gold, Silver or Bronze) that cover the BeNeLux chapter meetings 2022 and the BeNeLux OWASP Days 2022. Download our sponsor brochure and contact us seba@owasp.org for questions or sponsorship confirmation! Your sponsorship will be invested directly in the chapter meetings, supporting speaker and catering expenses. The sponsorship will also be dedicated to cover the costs of the OWASP 2022 BeNeLux event."} />
+        <HeroMini title={"SPONSORS"} bg_img="/img7.jpg" />
+        <IconTitleContent icon={false} title={"Sponsorship packages"} content={"The local Chapters of OWASP in The Netherlands and Belgium come together every year to host a physical event called “OWASP BeNeLux Days” which this year is happening in the heart of the City of Mechlen in Begium. It brings together a wide range of security technologists, from executives to individual contributors across SMBs and major corporations.These are important influencers and decision makers who drive the buying decisions for investments in security."} />
         <Sponsors only_icons={true} />
-        <BGText title={"Become a sponsor of OWASP BeNeLux!"} button={"Become a Sponsor"} type={2} />
-        <FAQ qa={faqList} />
         <PriceTable />
         <ContactUsSmall />
+        <br /><br />
+        <BGText title={"Become a sponsor of OWASP BeNeLux!"} button={"Become a Sponsor"} type={2} />
+        <FAQ qa={faqList} />
     </div>
 }

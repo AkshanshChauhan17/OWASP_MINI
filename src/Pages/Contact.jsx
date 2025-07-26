@@ -3,7 +3,7 @@ import HeroMini from "../Components/HeroMini";
 
 export default function Contact() {
     return <div className="contact">
-        <HeroMini title={"CONTACT US"} />
+        <HeroMini title={"CONTACT US"} bg_img="/img3.jpg" />
         <ContactForm />
     </div>
 }

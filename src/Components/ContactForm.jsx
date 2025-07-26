@@ -23,9 +23,9 @@ export default function ContactForm() {
           <li>c/o Sr Fiduciarire Cv, Steenvoordestraat 184, 9070 Destelbergen, Belgium</li>
           <li>VAT: BE 0836743279</li>
           <br />
-          <li>
+          {/* <li>
             <a href="mailto:Contact@moralizer.com">Contact@moralizer.com</a>
-          </li>
+          </li> */}
         </ul>
       </div>
 

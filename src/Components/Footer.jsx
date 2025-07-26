@@ -20,6 +20,10 @@ var footerLinks = [
         name: "About",
         link: "/about",
       },
+      {
+        name: "Programs",
+        link: "/program",
+      }
     ],
   },
   {
@@ -28,11 +32,7 @@ var footerLinks = [
       {
         name: "Our Sponsor",
         link: "/sponsors",
-      },
-      {
-        name: "Our Programs",
-        link: "/program",
-      },
+      }
     ],
   },
   {

@@ -4,7 +4,7 @@ import HeroMini from "../Components/HeroMini";
 
 export default function Conference() {
     return <div className="conference">
-        <HeroMini title={"Conference"} />
+        <HeroMini title={"Conference"} bg_img="/img2.jpg" />
         <ConferenceSchedule />
         <ConfirmedSpeakers />
     </div>

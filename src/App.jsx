@@ -11,14 +11,12 @@ import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
 import { useState } from 'react'
 import Footer from './Components/Footer'
 import Conference from './Pages/Conference'
+import ScrollToTop from './FX/scrollToTop'
 
 var nav_cont = [
   {
     title: "Home",
     url: "/"
-  },{
-    title: "About",
-    url: "/about"
   },{
     title: "Program",
     url: "/program"
@@ -26,14 +24,17 @@ var nav_cont = [
     title: "Sponsor",
     url: "/sponsors"
   },{
-    title: "Donation",
-    url: "/donation"
-  },{
     title: "Contact Us",
     url: "/contact"
-  }, {
+  },{
+    title: "About",
+    url: "/about"
+  },{
     title: "Conference",
     url: "/conference"
+  },{
+    title: "Donation",
+    url: "/donation"
   }
 ]
 
@@ -41,6 +42,7 @@ function App() {
   const [navOpen, setNavOpen] = useState(true);
   return (
       <>
+        <ScrollToTop />
         <div className={navOpen ? "nav-bar nav-bar-open" : "nav-bar"}>
           <Link to={"/"} onClick={()=>setNavOpen(true)}><div className="left-icon"></div></Link>
           <div className="right-links">
