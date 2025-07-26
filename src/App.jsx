@@ -11,7 +11,7 @@ import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
 import { useState } from 'react'
 import Footer from './Components/Footer'
 import Conference from './Pages/Conference'
-import ScrollToTop from './FX/scrollToTop'
+import ScrollToTop from './Function/ScrollToTop'
 
 var nav_cont = [
   {
