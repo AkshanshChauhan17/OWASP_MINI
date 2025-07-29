@@ -21,7 +21,7 @@ export default function Home() {
         <ConferenceInfo />
         <PreEvents title_show={true} />
         <WhatHappen />
-        <BGText title={"Pricing"} head={"The conference day is completely free, but registration is required!"} button={"For a participation of 50€ for one day!"} />
+        <BGText type={1} title={"Pricing"} head={"The conference day is completely free, but registration is required!"} button={"For a participation of 50€ for one day!"} />
         <FAQ ao={true} />
     </div>
 }
