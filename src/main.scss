@@ -1201,7 +1201,26 @@ li {
     }
 }
 
+.db {
+    text-decoration: none;
+    display: flex;
+    max-width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
 @media screen and (max-width: 700px) {
+    .db {
+        text-decoration: none;
+        display: flex;
+        max-width: calc(100vw - 100px);
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 40px;
+    }
     .confirmed-speakers {
         padding: 2rem;
         background: #f9f9f9;

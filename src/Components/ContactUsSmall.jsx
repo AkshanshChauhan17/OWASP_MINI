@@ -1,3 +1,5 @@
+import { AiOutlineDownload } from "react-icons/ai";
+
 const ContactUsSmall = () => {
   return (
     <div className="contact-us-small">
@@ -19,11 +21,11 @@ const ContactUsSmall = () => {
 
       <a
         href="https://2025.owaspbenelux.eu/assets/files/OWASP_Sponsorship_Brochure_Benelux_2025.pdf"
-        className="download-brochure"
+        className="btn db"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Download our sponsor brochure
+        Download our sponsor brochure <AiOutlineDownload />
       </a>
     </div>
   );
