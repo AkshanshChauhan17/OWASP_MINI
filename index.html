@@ -14,20 +14,6 @@
   <script type="module" crossorigin src="./assets/index-718f59fb.js"></script>
   <link rel="stylesheet" href="./assets/index-a9aa260a.css">
 </head>
-<script>
-    (function() {
-        // Get current path after last "/"
-        const pathname = window.location.pathname;
-
-        // If not root "/", redirect to hash version
-        if (pathname && pathname !== "/") {
-            // Remove leading "/" and append hash
-            const newPath = "#" + pathname;
-            // Redirect to hash route
-            window.location.replace("./" + newPath + window.location.search + window.location.hash);
-        }
-    })();
-</script>
 
 <body>
     <div id="root"></div>
